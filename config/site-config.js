@@ -7,13 +7,16 @@ export default {
   calendlyUrl: '', // CALENDLY_URL: your https://calendly.com/... event URL
   tutor: { name: '', photo: '', photoAlt: '', academicBackground: '', research: '', experience: '', examBoards: '', testimonials: [] },
   mailerLite: {
+    accountId: '2655165', // Loads MailerLite Universal once in every page head.
     // Paste the complete HTML form from MailerLite into formHtml. Keep its action,
     // hidden provider inputs, scripts, CAPTCHA, and consent controls intact.
     // MAILERLITE_FORM_CODE_HERE — this template is reused for every resource.
     formHtml: '',
     diagnosticFormHtml: '',
     // Optional form overrides; keys match worksheet.mailerLiteId in resources.json.
-    resourceForms: {},
+    resourceForms: {
+      cosine_rule: '<div class="ml-embedded" data-form="g4crXY"></div>'
+    },
     resourceField: 'fields[resource_requested]', // MAILERLITE_RESOURCE_FIELD
     sourceField: 'fields[source]',
     videoField: 'fields[youtube_video]'
