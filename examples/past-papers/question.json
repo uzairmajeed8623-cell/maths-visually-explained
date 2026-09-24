@@ -1,0 +1,18 @@
+{
+  "slug": "replace-with-board-year-paper-question",
+  "published": false,
+  "title": "Replace with a short question title",
+  "description": "Replace with a short description of the skills in this question.",
+  "board": "Replace with the actual exam board",
+  "qualification": "GCSE",
+  "year": 2024,
+  "session": "June",
+  "paper": "Replace with the actual paper code",
+  "questionNumber": "Replace with the actual question number",
+  "topic": "Trigonometry",
+  "tier": "Higher",
+  "grades": [6, 7],
+  "youtubeUrl": "",
+  "sourceUrl": "",
+  "contentFile": "content/past-papers/replace-with-board-year-paper-question.html"
+}

@@ -22,6 +22,52 @@ Before accepting enquiries: add your real name, photo, verified qualifications a
 
 Until configured, email forms are visibly disabled and booking shows an honest unavailable state. They do not collect data or simulate successful submissions. Testimonials and credentials are not fabricated. Browser/device visual QA and live MailerLite/Calendly end-to-end testing remain to be performed; no account details were provided.
 
+## Filter resources by tier and grade
+
+Edit each entry in `data/resources.json`:
+
+```json
+"tier": "Both",
+"grades": [4, 5]
+```
+
+- `tier`: `Foundation`, `Higher` or `Both`. Both-tier entries appear under either filter.
+- `grades`: approximate difficulty of this resource's current practice, not an official question grade or a label for the whole topic. Use `[6, 7]` for grades 6 and 7, or `[]` for unrated. Existing starter estimates can be revised when your final worksheets are added.
+- Topic, tier, grade and text search combine: a result must match all active filters. Clear filters resets everything.
+- `latexFormula` is optional mathematical LaTeX for the formula on a resource page; JSON requires doubled backslashes, e.g. `"latexFormula": "\\frac{a}{\\sin A}=\\frac{b}{\\sin B}"`. Keep `formula` as a plain-text alternative.
+
+## Publish a past-paper solution
+
+The **Past papers** navigation tab opens `/past-papers/`. It supports text search plus topic, tier, approximate grade, exam board, year and written/video filters. Each published question has its own shareable URL.
+
+1. Open `examples/past-papers/question.json` and copy its object into the array in `data/past-papers.json`. Separate multiple question objects with commas. Do not overwrite existing entries.
+2. Give the question a unique lowercase hyphenated `slug`. Fill the real board, qualification, exam year/session, paper code and question number. Add its title, description, topic, tier and approximate grade(s). Use `[]` if you have not rated difficulty.
+3. For a **video solution**, set `youtubeUrl` to the HTTPS YouTube watch, share or Shorts link. Use `""` when there is no video; no empty player is shown.
+4. For a **written solution**, copy `examples/past-papers/solution.html` to `content/past-papers/your-slug.html`. Replace the sample with your question and working. Set `contentFile` to this exact path. Use `""` for a video-only entry. Both formats can be supplied together.
+5. Put diagram images in `public/diagrams/`. Within the written solution use `<img src="/diagrams/your-diagram.svg" alt="Describe the mathematical information">`. The build automatically adds the GitHub repository prefix. The optional sample diagram is in `examples/past-papers/triangle.svg`; it is not published unless copied into `public/diagrams/`.
+6. Add an optional HTTPS `sourceUrl` linking to the original paper. Use only material you have permission to reproduce; you can write your own explanation and link to the original question instead of copying it.
+7. Keep `published` false while preparing the entry. Set it to true and commit all its files to `main` when ready. Check GitHub Actions for a successful build/deployment, then open `/past-papers/your-slug/` and test the diagram/video.
+
+The supplied example is original practice, **not a real past-paper question**. No exam references or videos have been invented. The live collection starts empty until you publish your first entry. Drafts do not get public website routes or sitemap entries, but their source remains visible in this public GitHub repository.
+
+### Writing equations and diagrams
+
+Written solution files are small HTML fragments, not full webpages. Start sections with `<h2>`, then use `<p>`, `<ol>`, `<li>`, `<figure>` and `<figcaption>`. Do not include `<h1>`, page wrappers, scripts or video iframes; the site generates those.
+
+```html
+<h2>The method</h2>
+<p>Let the unknown side be \(a\). Use the cosine rule:</p>
+\[a^2=b^2+c^2-2bc\cos A\]
+<figure>
+  <img src="/diagrams/triangle.svg" alt="Triangle with sides 7 and 9 enclosing 60 degrees; opposite side a">
+  <figcaption>Diagram not drawn to scale.</figcaption>
+</figure>
+```
+
+Use a **single backslash** in HTML files. `\(...\)` is inline maths; `\[...\]` or `$$...$$` is display maths. Single dollar signs are left alone so prices are not interpreted as equations. Standard aligned working and fractions are supported by [KaTeX](https://katex.org/docs/supported). Full LaTeX documents and TikZ are not compiled by the website: export diagrams from LaTeX/TikZ to SVG, PNG or WebP before uploading.
+
+KaTeX 0.18.9 is loaded from jsDelivr, with integrity checks, only on pages containing maths. If that external service cannot load, original equation notation remains readable and a message is shown. No package installation or server is needed. Review rendered equations before sharing a new solution.
+
 ## Add a new resource in GitHub
 
 1. Open `data/resources.json`, then click the pencil to edit.
@@ -31,7 +77,7 @@ Until configured, email forms are visibly disabled and booking shows an honest u
 5. Choose a `category`. Any new category automatically gets a filter; no navigation edit is needed.
 6. Add a short `description`.
 7. Add the real `youtubeUrl`, or leave it empty until published.
-8. Set worksheet `delivery` to `web`, `direct` or `email`.
+8. Set `tier` and `grades` as described above, then set worksheet `delivery` to `web`, `direct` or `email`.
 9. Add `pdf` for direct delivery or `mailerLiteId` for email delivery.
 10. Commit to `main`. The Pages workflow generates the card, route, categories, filters and related links, then publishes them.
 
@@ -48,6 +94,8 @@ Example:
   "youtubeUrl": "",
   "featured": false,
   "level": "Higher",
+  "tier": "Higher",
+  "grades": [7, 8],
   "diagram": "lines",
   "explanation": "First rearrange into ax² + bx + c = 0.",
   "questions": [

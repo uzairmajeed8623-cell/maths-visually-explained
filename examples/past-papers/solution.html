@@ -1,0 +1,31 @@
+<!-- Original practice example for learning the format. This is not an exam-board question.
+     Replace the question, working and diagram with your chosen past-paper content. -->
+<h2>The question</h2>
+<p>A triangle has two sides of lengths \(7\,\text{cm}\) and \(9\,\text{cm}\).
+Their included angle is \(60^\circ\). Find the opposite side \(a\), to three significant figures.</p>
+
+<!-- Copy examples/past-papers/triangle.svg into public/diagrams/triangle.svg
+     to use this sample image. Replace both path and alt text for your own diagram. -->
+<figure>
+  <img src="/diagrams/triangle.svg" alt="Triangle ABC: AB is 7 cm, AC is 9 cm, angle A is 60 degrees, and BC is the unknown side a." width="520" height="320">
+  <figcaption>Diagram not drawn to scale.</figcaption>
+</figure>
+
+<h2>Worked solution</h2>
+<h3>1. Choose the cosine rule</h3>
+<p>We know two sides and the angle between them, so use:</p>
+\[a^2=b^2+c^2-2bc\cos A\]
+
+<h3>2. Substitute the values</h3>
+\[\begin{aligned}
+a^2 &= 7^2+9^2-2\times7\times9\cos60^\circ\\
+    &= 49+81-63\\
+    &= 67
+\end{aligned}\]
+
+<h3>3. Take the square root</h3>
+\[a=\sqrt{67}\approx8.19\,\text{cm}\]
+<p>The final answer is \(8.19\,\text{cm}\), to three significant figures.</p>
+
+<h2>A common mistake</h2>
+<p>Do not use Pythagoras here: the given angle is \(60^\circ\), not a right angle.</p>

@@ -1,3 +1,4 @@
+import {matchesCatalog} from './catalog.js';
 (() => {
   const menu = document.querySelector('.menu-toggle');
   const nav = document.querySelector('#main-nav');
@@ -12,14 +13,39 @@
     const fill = () => {for(const form of wrapper.querySelectorAll('form'))for(const [field,value] of [[wrapper.dataset.resourceField,wrapper.dataset.resource],[wrapper.dataset.sourceField,attribution('source')],[wrapper.dataset.videoField,attribution('video')]]){if(!field)continue;let input=[...form.elements].find(el=>el.name===field);if(!input){input=document.createElement('input');input.name=field;input.type='hidden';form.appendChild(input)}if(input.value!==value)input.value=value;if(input.type!=='hidden'){input.type='hidden';const parent=input.closest('.ml-field-group');if(parent)parent.hidden=true}}};
     fill();const observer=new MutationObserver(fill);observer.observe(wrapper,{childList:true,subtree:true});wrapper.addEventListener('submit',fill,true);
   }
-  const search=document.querySelector('#resource-search');
-  const filters=[...document.querySelectorAll('[data-filter]')];
-  const cards=[...document.querySelectorAll('.resource-card[data-search]')];
-  let category='all';
-  function filter(){if(!search)return [];const query=search.value.toLowerCase().trim();const matches=[];for(const card of cards){const show=(category==='all'||card.dataset.category===category)&&card.dataset.search.includes(query);card.hidden=!show;if(show)matches.push({title:card.querySelector('h3').textContent,url:card.querySelector('h3 a').href})}document.querySelector('#resource-count').textContent=`${matches.length} resource${matches.length===1?'':'s'}`;document.querySelector('#empty-results').hidden=matches.length>0;filters.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter===category)));return matches}
-  search?.addEventListener('input',filter);
-  filters.forEach(button=>button.addEventListener('click',()=>{category=button.dataset.filter;filter()}));
-  document.querySelector('#reset-search')?.addEventListener('click',()=>{search.value='';category='all';filter();search.focus()});
-  const context=document.modelContext;
-  if(search&&context?.registerTool){const lifecycle=new AbortController();try{Promise.resolve(context.registerTool({name:'filter_maths_resources',title:'Filter Maths resources',description:'Search the visible resource library and filter by a topic category. Does not submit forms or subscribe anyone.',inputSchema:{type:'object',properties:{query:{type:'string'},category:{type:'string'}},additionalProperties:false},annotations:{readOnlyHint:true,untrustedContentHint:false},execute(input){if(!input||typeof input!=='object'||Array.isArray(input)||Object.keys(input).some(k=>!['query','category'].includes(k))||(input.query!==undefined&&typeof input.query!=='string')||(input.category!==undefined&&typeof input.category!=='string'))throw Error('Expected query and category strings');const selected=input.category||'all';if(!filters.some(f=>f.dataset.filter===selected))throw Error('Unknown category');search.value=input.query||'';category=selected;return {resources:filter()}}},{signal:lifecycle.signal})).catch(()=>{});}catch{}window.addEventListener('pagehide',()=>lifecycle.abort(),{once:true})}
+  for(const library of document.querySelectorAll('[data-library]')) {
+    const search=library.querySelector('[data-catalog-search]');
+    const selects=[...library.querySelectorAll('[data-select-filter]')];
+    const topics=[...library.querySelectorAll('[data-filter]')];
+    const cards=[...library.querySelectorAll('[data-catalog-list] > [data-search]')];
+    const noun=library.dataset.countNoun;
+    let category='all';
+    function filter(){
+      const selected=Object.fromEntries(selects.map(s=>[s.dataset.selectFilter,s.value]));
+      if(topics.length)selected.category=category;
+      const matches=[];
+      for(const card of cards){card.hidden=!matchesCatalog(card.dataset,search.value,selected);if(!card.hidden){const link=card.querySelector('h2 a,h3 a');matches.push({title:link.textContent,url:link.href})}}
+      library.querySelector('[data-catalog-count]').textContent=`${matches.length} ${noun}${matches.length===1?'':'s'}`;
+      library.querySelector('[data-catalog-empty]').hidden=matches.length>0||cards.length===0;
+      topics.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter===category)));
+      return matches;
+    }
+    search.addEventListener('input',filter);
+    selects.forEach(s=>s.addEventListener('change',filter));
+    topics.forEach(b=>b.addEventListener('click',()=>{category=b.dataset.filter;filter()}));
+    library.querySelectorAll('[data-clear-filters]').forEach(b=>b.addEventListener('click',()=>{search.value='';category='all';selects.forEach(s=>s.value='all');filter();search.focus()}));
+    filter();
+    // Preserve the existing resource-search tool and let it combine tier/grade filters.
+    const context=document.modelContext;
+    if(library.dataset.library==='resources'&&context?.registerTool){
+      const lifecycle=new AbortController();
+      try{Promise.resolve(context.registerTool({name:'filter_maths_resources',title:'Filter Maths resources',description:'Search the visible resource library by topic, tier and approximate grade. Does not submit forms.',inputSchema:{type:'object',properties:{query:{type:'string'},category:{type:'string'},tier:{type:'string',enum:['all','Foundation','Higher']},grade:{type:'string',enum:['all','1','2','3','4','5','6','7','8','9']}},additionalProperties:false},annotations:{readOnlyHint:true,untrustedContentHint:false},execute(input){
+        if(!input||typeof input!=='object'||Array.isArray(input)||Object.keys(input).some(k=>!['query','category','tier','grade'].includes(k)||typeof input[k]!=='string'))throw Error('Expected string filter values');
+        const chosen=input.category||'all';if(!topics.some(b=>b.dataset.filter===chosen))throw Error('Unknown topic');
+        for(const s of selects){const value=input[s.dataset.selectFilter]||'all';if(![...s.options].some(o=>o.value===value))throw Error('Unknown '+s.dataset.selectFilter)}
+        category=chosen;search.value=input.query||'';selects.forEach(s=>s.value=input[s.dataset.selectFilter]||'all');return {resources:filter()};
+      }},{signal:lifecycle.signal})).catch(()=>{});}catch{}
+      window.addEventListener('pagehide',()=>lifecycle.abort(),{once:true});
+    }
+  }
 })();

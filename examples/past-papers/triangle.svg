@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 320" role="img" aria-labelledby="title desc">
+  <title id="title">Cosine rule practice triangle</title>
+  <desc id="desc">Sides AB and AC have lengths 7 and 9 cm. Their included angle at A is 60 degrees. Side BC is labelled a.</desc>
+  <rect width="520" height="320" fill="white"/>
+  <path d="M80 250L220 40L450 250Z" fill="#eaece3" stroke="#29483d" stroke-width="2"/>
+  <path d="M128 250A48 48 0 0 0 107 210" fill="none" stroke="#a76448" stroke-width="2"/>
+  <g font-family="Georgia,serif" font-size="22" fill="#172033">
+    <text x="54" y="275">A</text><text x="215" y="26">B</text><text x="460" y="275">C</text>
+    <text x="90" y="133">7 cm</text><text x="248" y="282">9 cm</text><text x="355" y="135">a</text>
+    <text x="128" y="232" fill="#a76448">60°</text>
+  </g>
+</svg>
