@@ -45,6 +45,9 @@ try {
     assert(!fs.existsSync(path.join(temp,'dist/past-papers/test-draft')));
     assert(!read('sitemap.xml').includes('test-draft'));
     assert(read('sitemap.xml').includes('/past-papers/test-both/'));
+    assert.match(written, /app\.js\?v=[a-f0-9]{12}/);
+    assert.match(written, /style\.css\?v=[a-f0-9]{12}/);
+    assert.match(read('app.js'), /catalog\.js\?v=[a-f0-9]{12}/);
     for(const html of [written,video,both,read('past-papers/index.html')]){
       assert.equal((html.match(/ml\('account'/g)||[]).length,1);
       assert.equal((html.match(/<h1[ >]/g)||[]).length,1);
