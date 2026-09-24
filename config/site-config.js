@@ -5,7 +5,7 @@ export default {
   contactEmail: '',
   youtubeChannel: '',
   calendlyUrl: '', // CALENDLY_URL: your https://calendly.com/... event URL
-  tutor: { name: '', photo: '', photoAlt: '', academicBackground: '', research: '', experience: '', examBoards: '', testimonials: [] },
+  tutor: { name: 'Uzair Majeed', photo: '', photoAlt: '', academicBackground: 'Ms Physics', research: '', experience: '', examBoards: '', testimonials: [] },
   mailerLite: {
     accountId: '2655165', // Loads MailerLite Universal once in every page head.
     // Paste the complete HTML form from MailerLite into formHtml. Keep its action,
