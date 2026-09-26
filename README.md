@@ -232,3 +232,14 @@ Use any static preview server for `dist/`; double-clicking HTML files is not rep
 ## Maintenance boundaries
 
 There are no accounts, admin pages, databases or secret keys. GitHub is the content editor. MailerLite handles subscriptions and delivery; Calendly handles bookings. Search runs locally. Fonts are system fonts and the diagrams are SVG, keeping pages lightweight. YouTube embeds load only on configured lesson pages; booking loads Calendly only when configured. Policies must describe the providers actually enabled.
+# Related practice and navigation
+
+Past-paper pages can include an open **Try these next** section below their
+video and written explanation. Add a `practiceFile` to the question's entry;
+see `content/past-papers/README.md` and `examples/past-papers/practice.html`.
+Each answer can be revealed independently. No email form is attached.
+
+The shared header gives Free resources and Past papers direct links, groups
+Parents & tutoring, About, Video lessons and Book a session under More, and
+keeps Free diagnostic as its one main button. The logo links to Home. On
+smaller screens these links sit inside the Menu button.

@@ -11,8 +11,12 @@
   "questionNumber": "Replace with the actual question number",
   "topic": "Trigonometry",
   "tier": "Higher",
-  "grades": [6, 7],
+  "grades": [
+    6,
+    7
+  ],
   "youtubeUrl": "",
   "sourceUrl": "",
-  "contentFile": "content/past-papers/replace-with-board-year-paper-question.html"
+  "contentFile": "content/past-papers/replace-with-board-year-paper-question.html",
+  "practiceFile": "content/past-papers/replace-with-board-year-paper-question-practice.html"
 }

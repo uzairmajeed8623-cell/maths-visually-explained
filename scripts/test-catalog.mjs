@@ -25,7 +25,8 @@ try {
   const content='content/past-papers/test-written.html';
   fs.copyFileSync('examples/past-papers/solution.html',path.join(temp,content));
   fs.copyFileSync('examples/past-papers/triangle.svg',path.join(temp,'public/diagrams/triangle.svg'));
-  const q={slug:'test-written',published:true,title:'Test written solution',description:'Original test fixture',board:'Test board',qualification:'GCSE',year:2024,session:'June',paper:'Test paper',questionNumber:'1',topic:'Trigonometry',tier:'Higher',grades:[6,7],youtubeUrl:'',sourceUrl:'',contentFile:content};
+  fs.copyFileSync('examples/past-papers/practice.html',path.join(temp,'content/past-papers/test-practice.html'));
+  const q={slug:'test-written',published:true,title:'Test written solution',description:'Original test fixture',board:'Test board',qualification:'GCSE',year:2024,session:'June',paper:'Test paper',questionNumber:'1',topic:'Trigonometry',tier:'Higher',grades:[6,7],youtubeUrl:'',sourceUrl:'',contentFile:content,practiceFile:'content/past-papers/test-practice.html'};
   const fixture=[q,{...q,slug:'test-video',title:'Test video solution',youtubeUrl:'https://youtu.be/abcdefghijk',contentFile:''},{...q,slug:'test-both',title:'Test both formats',youtubeUrl:'https://www.youtube.com/watch?v=abcdefghijk'},{slug:'test-draft',published:false}];
   fs.writeFileSync(path.join(temp,'data/past-papers.json'),JSON.stringify(fixture));
   for(const base of ['', '/maths-visually-explained']) {
@@ -40,6 +41,14 @@ try {
     assert(!written.includes('<iframe'));
     assert(video.includes('https://www.youtube-nocookie.com/embed/abcdefghijk'));
     assert(!video.includes('class="written-solution"'));
+    for(const html of [written,video,both]) {
+      assert(html.includes('id="try-these-next"'));
+      assert.equal((html.match(/<summary>Show worked answer<\/summary>/g)||[]).length,3);
+      assert(!html.includes('<form')&&!html.includes('provider-form'));
+      assert(html.includes('katex@0.18.9'));
+      assert(html.indexOf('id="try-these-next"')>html.indexOf('class="solution-content"'));
+    }
+    assert(both.indexOf('id="try-these-next"')>both.indexOf('class="written-solution"'));
     assert(both.includes('<iframe')&&both.includes('class="written-solution"'));
     assert(read('past-papers/index.html').includes('data-format="video|written"'));
     assert(!fs.existsSync(path.join(temp,'dist/past-papers/test-draft')));
@@ -54,8 +63,16 @@ try {
       assert(!html.includes('data-form="g4crXY"'));
     }
   }
+  delete fixture[0].practiceFile;
+  fs.writeFileSync(path.join(temp,'data/past-papers.json'),JSON.stringify(fixture));
+  execFileSync(process.execPath,['scripts/build.mjs'],{cwd:temp,stdio:'pipe'});
+  assert(!fs.readFileSync(path.join(temp,'dist/past-papers/test-written/index.html'),'utf8').includes('id="try-these-next"'));
+  fixture[0].practiceFile='../../secret.html';
+  fs.writeFileSync(path.join(temp,'data/past-papers.json'),JSON.stringify(fixture));
+  assert.throws(()=>execFileSync(process.execPath,['scripts/build.mjs'],{cwd:temp,stdio:'pipe'}));
+  delete fixture[0].practiceFile;
   fixture[0].contentFile='../../secret.html';
   fs.writeFileSync(path.join(temp,'data/past-papers.json'),JSON.stringify(fixture));
   assert.throws(()=>execFileSync(process.execPath,['scripts/build.mjs'],{cwd:temp,stdio:'pipe'}));
 } finally { fs.rmSync(temp,{recursive:true,force:true}); }
-console.log('PASS: combined filters; written/video/both solutions; maths and diagrams; draft exclusion; root/project paths; invalid content rejection.');
+console.log('PASS: combined filters; written/video/both solutions with open practice and expandable answers; maths and diagrams; draft exclusion; root/project paths; invalid content rejection.');

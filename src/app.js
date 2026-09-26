@@ -2,8 +2,12 @@ import {matchesCatalog} from './catalog.js';
 (() => {
   const menu = document.querySelector('.menu-toggle');
   const nav = document.querySelector('#main-nav');
-  menu?.addEventListener('click', () => {const expanded=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(expanded));nav.classList.toggle('open',expanded)});
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav?.classList.contains('open')){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.focus()}});
+  const more = document.querySelector('.nav-more');
+  const closeMenu = () => { nav?.classList.remove('open'); menu?.setAttribute('aria-expanded','false'); if(more)more.open=false; };
+  menu?.addEventListener('click', () => {const expanded=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(expanded));nav.classList.toggle('open',expanded);if(!expanded&&more)more.open=false;});
+  document.addEventListener('click',e=>{if(more&&!more.contains(e.target))more.open=false;if(nav?.classList.contains('open')&&!e.target.closest('.header'))closeMenu();});
+  document.addEventListener('keydown',e=>{if(e.key!=='Escape')return;if(more?.open){more.open=false;more.querySelector('summary').focus();}else if(nav?.classList.contains('open')){closeMenu();menu.focus();}});
+  window.matchMedia('(min-width: 961px)').addEventListener('change',closeMenu);
   const params=new URLSearchParams(location.search);
   // Keep only bounded campaign fields, never email or other personal form data.
   for(const key of ['source','video']){const value=params.get(key);if(value){try{sessionStorage.setItem('maths_'+key,value.slice(0,150))}catch{}}}
