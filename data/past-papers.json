@@ -1,1 +1,21 @@
-[]
+[
+  {
+    "slug": "edexcel-2024-november-3h-q16",
+    "published": true,
+    "title": "Finding a rectangle's missing vertex",
+    "description": "Use parallel and perpendicular gradients, then solve simultaneous equations to find the coordinates of D.",
+    "board": "Edexcel",
+    "qualification": "GCSE",
+    "year": 2024,
+    "session": "November",
+    "paper": "Paper 3 (Higher, Calculator)",
+    "questionNumber": "16",
+    "topic": "Coordinate geometry",
+    "tier": "Higher",
+    "grades": [],
+    "youtubeUrl": "",
+    "sourceUrl": "",
+    "contentFile": "content/past-papers/edexcel-2024-november-3h-q16.html",
+    "practiceFile": ""
+  }
+]

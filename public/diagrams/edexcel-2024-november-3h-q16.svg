@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="title desc">
+  <title id="title">Rectangle OBCD on coordinate axes</title>
+  <desc id="desc">O is the origin. B is at (2, minus 4). D is above and to the right of O. C is opposite O. D, C and E lie on a straight line, with E at (12, minus 6.5). The coordinates of D are to be found.</desc>
+  <rect width="640" height="400" fill="#fff"/>
+  <g stroke="#737373" stroke-width="1.5" fill="none">
+    <path d="M90 160H520M190 350V35"/>
+  </g>
+  <g fill="#737373"><path d="m520 160-9-4v8z"/><path d="m190 35-4 9h8z"/></g>
+  <path d="M190 160 240 260 415 172.5 365 72.5Z M415 172.5 490 322.5" fill="none" stroke="#173c36" stroke-width="2.5" stroke-linejoin="round"/>
+  <g fill="#172c28" font-family="Georgia, serif" font-size="23" font-style="italic">
+    <text x="169" y="185">O</text><text x="228" y="290">B</text>
+    <text x="425" y="175">C</text><text x="366" y="59">D</text>
+    <text x="500" y="340">E</text><text x="525" y="182">x</text><text x="168" y="39">y</text>
+  </g>
+</svg>
