@@ -1,5 +1,54 @@
 [
   {
+    "title": "SOHCAHTOA",
+    "slug": "sohcahtoa",
+    "category": "Trigonometry",
+    "description": "Find missing sides and angles in right-angled triangles, then build up to multi-step problems. Download the free practice sheet and worked answers.",
+    "youtubeUrl": "",
+    "featured": false,
+    "level": "Foundation & Higher",
+    "tier": "Both",
+    "grades": [
+      4,
+      5,
+      6
+    ],
+    "diagram": "right-triangle",
+    "explanation": "SOHCAHTOA helps you choose a trigonometric ratio in a right-angled triangle. Label the opposite and adjacent sides relative to the angle you are using; the hypotenuse is always opposite the right angle. Choose the ratio that connects the known side and the side or angle you need. Use your calculator in degree mode.",
+    "formula": "sin θ = opposite / hypotenuse; cos θ = adjacent / hypotenuse; tan θ = opposite / adjacent",
+    "latexFormula": "\\begin{aligned}\\sin\\theta&=\\frac{\\text{opposite}}{\\text{hypotenuse}}\\\\\\cos\\theta&=\\frac{\\text{adjacent}}{\\text{hypotenuse}}\\\\\\tan\\theta&=\\frac{\\text{opposite}}{\\text{adjacent}}\\end{aligned}",
+    "workedExample": {
+      "question": "A right-angled triangle has a hypotenuse of 12 cm. Find the side opposite the 35° angle, correct to 1 decimal place.",
+      "steps": [
+        "The known side is the hypotenuse and the required side is opposite 35°, so use sine (SOH).",
+        "sin 35° = x / 12",
+        "x = 12 × sin 35° = 6.882917…",
+        "x = 6.9 cm (1 d.p.)."
+      ]
+    },
+    "questions": [
+      {
+        "question": "The hypotenuse of a right-angled triangle is 10 cm. Find the side adjacent to a 60° angle.",
+        "answer": "cos 60° = x / 10, so x = 10 × cos 60° = 5 cm."
+      },
+      {
+        "question": "The side opposite a 30° angle is 4 cm. Find the hypotenuse.",
+        "answer": "sin 30° = 4 / h, so h = 4 / sin 30° = 8 cm."
+      },
+      {
+        "question": "Relative to angle θ, the opposite side is 6 cm and the adjacent side is 8 cm. Find θ to 1 decimal place.",
+        "answer": "tan θ = 6 / 8, so θ = tan⁻¹(6 / 8) = 36.9° (1 d.p.)."
+      }
+    ],
+    "worksheet": {
+      "available": true,
+      "delivery": "direct",
+      "pdf": "/resources/SOHCAHTOA_Practice_Worksheet.pdf",
+      "answersPdf": "/resources/SOHCAHTOA_Worked_Answers.pdf",
+      "description": "Six exam-style questions that increase in difficulty, with separate step-by-step worked answers. Allow about 35 minutes; 21 marks in total. Approximate Grades 4–6: Foundation and Higher practice, with the later questions offering a harder extension."
+    }
+  },
+  {
     "title": "Cosine Rule",
     "slug": "cosine-rule",
     "category": "Trigonometry",
