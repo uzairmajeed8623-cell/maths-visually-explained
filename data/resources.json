@@ -3,7 +3,7 @@
     "title": "SOHCAHTOA",
     "slug": "sohcahtoa",
     "category": "Trigonometry",
-    "description": "Find missing sides and angles in right-angled triangles, then build up to multi-step problems. Download the free practice sheet and worked answers.",
+    "description": "Find missing sides and angles in right-angled triangles, then build up to multi-step problems. Download free practice, worked answers and Edexcel past-paper question packs.",
     "youtubeUrl": "",
     "featured": false,
     "level": "Foundation & Higher",
@@ -46,7 +46,21 @@
       "pdf": "/resources/SOHCAHTOA_Practice_Worksheet.pdf",
       "answersPdf": "/resources/SOHCAHTOA_Worked_Answers.pdf",
       "description": "Six exam-style questions that increase in difficulty, with separate step-by-step worked answers. Allow about 35 minutes; 21 marks in total. Approximate Grades 4–6: Foundation and Higher practice, with the later questions offering a harder extension."
-    }
+    },
+    "pastPaperPacks": [
+      {
+        "board": "Pearson Edexcel",
+        "tier": "Foundation",
+        "pdf": "/resources/SOHCAHTOA_Past_Papers_Foundation.pdf",
+        "description": "10 questions · 28 marks · 12 pages"
+      },
+      {
+        "board": "Pearson Edexcel",
+        "tier": "Higher",
+        "pdf": "/resources/SOHCAHTOA_Past_Papers_Higher.pdf",
+        "description": "35 questions · 126 marks · 37 pages"
+      }
+    ]
   },
   {
     "title": "Cosine Rule",
