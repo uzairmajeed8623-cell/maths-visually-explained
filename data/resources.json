@@ -1,5 +1,25 @@
 [
   {
+    "title": "Averages from Frequency Tables",
+    "slug": "averages-from-frequency-tables",
+    "category": "Probability & Statistics",
+    "description": "Learn how to find averages from a frequency table with a step-by-step visual video lesson.",
+    "youtubeUrl": "https://www.youtube.com/watch?v=3NBlkIfTV68",
+    "featured": true,
+    "level": "Foundation & Higher",
+    "tier": "Both",
+    "grades": [
+      4,
+      5
+    ],
+    "diagram": "lines",
+    "explanation": "A frequency table shows how often each value occurs. When finding averages, use the frequencies to account for all the values represented by the table. Follow the video to see the method explained visually.",
+    "worksheet": {
+      "available": false,
+      "delivery": "web"
+    }
+  },
+  {
     "title": "SOHCAHTOA",
     "slug": "sohcahtoa",
     "category": "Trigonometry",
