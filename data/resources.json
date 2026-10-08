@@ -83,6 +83,54 @@
     ]
   },
   {
+    "title": "Circle Theorems",
+    "slug": "circle-theorems",
+    "category": "Geometry",
+    "description": "Practise circle theorems with free Pearson Edexcel GCSE past-paper PDFs: Higher angles, mixed applications and proofs, plus Foundation circle properties.",
+    "youtubeUrl": "",
+    "featured": false,
+    "level": "Foundation & Higher",
+    "tier": "Both",
+    "grades": [],
+    "diagram": "circle-theorems",
+    "explanation": "For Higher, start with angles and problem solving, then practise geometric proofs or mixed questions combining circle geometry with trigonometry and coordinates. State the circle theorem or geometric reason for each step. For Foundation, choose the circle properties booklet: it covers vocabulary and prerequisite geometry rather than the Higher-only circle theorems.",
+    "worksheet": {
+      "available": false,
+      "delivery": "web"
+    },
+    "pastPaperDescription": "Selected questions from Pearson Edexcel GCSE Maths (1MA1), 2017–2025. Choose the booklet that matches your revision. Standard circle theorems are Higher-tier content; the Foundation booklet covers circle properties and prerequisites.",
+    "pastPaperPacks": [
+      {
+        "board": "Pearson Edexcel",
+        "title": "Higher — angles and problem solving",
+        "tier": "Higher",
+        "pdf": "/resources/Circle_Theorems_Higher.pdf",
+        "description": "13 questions · 52 marks · 15 pages. Apply circle theorems and give geometric reasons."
+      },
+      {
+        "board": "Pearson Edexcel",
+        "title": "Higher — mixed applications",
+        "tier": "Higher",
+        "pdf": "/resources/Circle_Theorems_Higher_Mixed_Applications.pdf",
+        "description": "12 questions · 51 marks · 14 pages. Combine circle geometry with trigonometry, algebra and coordinates."
+      },
+      {
+        "board": "Pearson Edexcel",
+        "title": "Higher — proofs",
+        "tier": "Higher",
+        "pdf": "/resources/Circle_Theorems_Higher_Proofs.pdf",
+        "description": "9 questions · 32 marks · 11 pages. Practise circle theorem proofs and geometric reasoning."
+      },
+      {
+        "board": "Pearson Edexcel",
+        "title": "Foundation — circle properties",
+        "tier": "Foundation",
+        "pdf": "/resources/Circle_Theorems_Foundation.pdf",
+        "description": "7 questions · 15 marks · 9 pages. Circle vocabulary and prerequisite geometry."
+      }
+    ]
+  },
+  {
     "title": "Cosine Rule",
     "slug": "cosine-rule",
     "category": "Trigonometry",
