@@ -86,3 +86,29 @@
  .header .menu-toggle{display:flex;align-items:center;gap:10px;border-radius:6px;min-height:44px}
 }
 @media(max-width:420px){.header .brand{gap:8px}.header .brand-name{font-size:1.35rem}.header .brand-name>span{font-size:.75rem;letter-spacing:.04em}.header .brand-mark{width:34px;height:38px}.header .menu-toggle{padding:9px;gap:7px}.practice-question{padding:20px}.related-practice h2{font-size:2rem}}
+
+/* Compact topic downloads: clear actions, optional supporting notes. */
+.download-panel{background:#eeeee4;border:1px solid #d7dccc;padding:20px;min-width:0}
+.download-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:18px}
+.download-heading h2{font-size:1.7rem;margin:0}
+.download-heading>span{color:var(--forest);font-size:.75rem;white-space:nowrap}
+.download-group+.download-group{border-top:1px solid var(--line);padding-top:16px;margin-top:18px}
+.download-group h3{font-family:var(--sans);font-size:.9375rem;font-weight:600;letter-spacing:0;line-height:1.4;margin:0 0 8px}
+.download-actions{display:flex;flex-wrap:wrap;gap:8px}
+.download-actions .button{flex:1 1 auto;min-height:44px;padding:10px 12px;gap:10px;font-size:.8125rem}
+.download-meta{font-size:.8125rem;color:var(--muted);margin:0 0 4px}
+.download-list{list-style:none;padding:0;margin:0}
+.download-list li{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.download-list li>div{min-width:0}
+.download-list h4{font-size:.875rem;font-weight:600;line-height:1.4;margin:0;overflow-wrap:break-word}
+.download-list li p{font-size:.75rem;color:var(--muted);margin:4px 0 0;line-height:1.5}
+.download-pdf{display:inline-flex;align-items:center;justify-content:center;gap:8px;flex-shrink:0;min-height:44px;padding:8px 11px;border:1px solid var(--forest);color:var(--forest);font-size:.8125rem}
+.download-pdf:hover{background:var(--forest);color:white}
+.download-note{font-size:.75rem;color:var(--muted);line-height:1.5;margin:10px 0 0}
+.download-access{margin-top:8px}
+.download-details{margin-top:12px;border-top:1px solid var(--line)}
+.download-details summary{min-height:44px;padding:11px 0;cursor:pointer;font-size:.8125rem;color:var(--forest)}
+.download-details>div{padding:0 0 8px}
+.download-details p{font-size:.8125rem;line-height:1.6;margin:0 0 10px;color:var(--muted)}
+.download-details p:last-child{margin-bottom:0}
+@media(max-width:700px){.has-downloads>.resource-aside{grid-row:1}.has-downloads>.resource-aside>.aside-note{display:none}.download-panel{padding:18px}.has-downloads>article{padding-top:20px}}
