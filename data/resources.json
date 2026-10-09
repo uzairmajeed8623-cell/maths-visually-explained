@@ -173,7 +173,24 @@
       6,
       7
     ],
-    "latexFormula": "a^2=b^2+c^2-2bc\\cos A"
+    "latexFormula": "a^2=b^2+c^2-2bc\\cos A",
+    "pastPaperDescription": "Selected Pearson Edexcel GCSE Maths (1MA1) questions from the 2017–2025 collection. Start with the main Higher booklet, then try the two additional mixed-application questions. No repeated questions between the booklets.",
+    "pastPaperPacks": [
+      {
+        "board": "Pearson Edexcel",
+        "title": "Higher — past-paper questions",
+        "tier": "Higher",
+        "pdf": "/resources/Cosine_Rule_Higher.pdf",
+        "description": "11 questions · 49 marks · 13 pages. Direct calculations, proof and multi-step problems."
+      },
+      {
+        "board": "Pearson Edexcel",
+        "title": "Higher — mixed application extension",
+        "tier": "Higher",
+        "pdf": "/resources/Cosine_Rule_Higher_Mixed_Applications.pdf",
+        "description": "2 questions · 10 marks · 4 pages. Additional sector and polygon problems; cosine rule is one valid method."
+      }
+    ]
   },
   {
     "title": "Completing the Square",
