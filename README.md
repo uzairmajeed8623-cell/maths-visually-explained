@@ -243,3 +243,46 @@ The shared header gives Free resources and Past papers direct links, groups
 Parents & tutoring, About, Video lessons and Book a session under More, and
 keeps Free diagnostic as its one main button. The logo links to Home. On
 smaller screens these links sit inside the Menu button.
+
+## Past papers: year/session archive
+
+`/past-papers/` opens the Higher archive. The tier buttons switch to Higher or
+Foundation. Each year places Summer and November side by side, with Paper 1,
+Paper 2 and Paper 3 linking to their own pages. The existing searchable question
+collection is now at `/past-papers/solutions/`; existing question URLs are unchanged.
+
+### Add a question paper or mark scheme
+
+Upload permitted PDF files under `public/resources/`, then add or edit an entry
+in `data/exam-papers.json` → `papers`:
+
+```json
+{
+  "id": "edexcel-2024-november-3h",
+  "questionPaper": "/resources/Edexcel_2024_November_3H.pdf",
+  "markScheme": "/resources/Edexcel_2024_November_3H_Mark_Scheme.pdf"
+}
+```
+
+Those filenames are examples: add the actual files before using their paths.
+HTTPS links are also supported. Leave a value as `""` until the file is available;
+the page then shows “Not added yet” with no broken download button.
+IDs follow `edexcel-YEAR-summer-or-november-PAPERNUMBERh-or-f`, for example
+`edexcel-2025-summer-1f`. Add years to `years` to extend the archive. The cancelled
+2020 and 2021 Summer sessions are recorded in `unavailableSessions`, with sources.
+
+### Attach a video or written solution to a paper
+
+Use the existing `data/past-papers.json` question format, adding a `paperId`:
+
+```json
+"paperId": "edexcel-2024-november-3h"
+```
+
+Set `youtubeUrl` for a video, `contentFile` for a written solution, or both.
+Set `published` to `true` when ready. The question automatically appears on its
+paper page, sorted by question number, with links to each available format.
+The builder checks that the tier, year, session and paper number match.
+Questions without `paperId` remain in the searchable solution collection.
+This is a static website: editing and uploads are done in GitHub, not through a
+public student upload form. Commit to `main` to publish normally.

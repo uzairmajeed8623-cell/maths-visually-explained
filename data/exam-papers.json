@@ -1,0 +1,10 @@
+{
+  "years": [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017],
+  "unavailableSessions": [
+    {"year": 2020, "session": "Summer", "reason": "No summer exams — cancelled in 2020.", "source": "https://qualifications.pearson.com/content/dam/pdf/campaigns/covid-19/autumn-2020-exam-series-faqs-students.pdf"},
+    {"year": 2021, "session": "Summer", "reason": "No summer exams — cancelled in 2021.", "source": "https://qualifications.pearson.com/content/dam/pdf/Support/Fees-for-academic-and-vocational-qualifications/B0015_General_Quals_Entry_Fees_2021_FINAL.pdf"}
+  ],
+  "papers": [
+    {"id": "edexcel-2024-november-3h", "questionPaper": "", "markScheme": ""}
+  ]
+}
