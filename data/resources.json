@@ -3,7 +3,7 @@
     "title": "Averages from Frequency Tables",
     "slug": "averages-from-frequency-tables",
     "category": "Probability & Statistics",
-    "description": "Learn how to find averages from a frequency table with a step-by-step visual video lesson.",
+    "description": "Find the mean and estimated mean from frequency tables. Watch the visual lesson and download free Edexcel Foundation and Higher question PDFs.",
     "youtubeUrl": "https://www.youtube.com/watch?v=3NBlkIfTV68",
     "featured": true,
     "level": "Foundation & Higher",
@@ -13,11 +13,62 @@
       5
     ],
     "diagram": "frequency-table",
-    "explanation": "A frequency table shows how often each value occurs. When finding averages, use the frequencies to account for all the values represented by the table. Follow the video to see the method explained visually.",
+    "explanation": "To find the mean from a frequency table, multiply each value by its frequency, add these products, then divide by the total frequency. For grouped data, use class midpoints to estimate the mean.",
     "worksheet": {
       "available": false,
       "delivery": "web"
-    }
+    },
+    "pastPaperDescription": "Pearson Edexcel GCSE Maths (1MA1), selected from 2017–2025 papers. Mean questions only; chart and histogram extensions are labelled at the end.",
+    "pastPaperPacks": [
+      {
+        "board": "Pearson Edexcel",
+        "title": "Foundation — mean questions",
+        "tier": "Foundation",
+        "pdf": "/resources/Mean_From_Frequency_Tables_Foundation.pdf",
+        "description": "8 questions/parts · 26 marks · 10 pages."
+      },
+      {
+        "board": "Pearson Edexcel",
+        "title": "Higher — mean questions",
+        "tier": "Higher",
+        "pdf": "/resources/Mean_From_Frequency_Tables_Higher.pdf",
+        "description": "6 questions/parts · 21 marks · 8 pages."
+      }
+    ]
+  },
+  {
+    "title": "Median",
+    "slug": "median",
+    "category": "Probability & Statistics",
+    "description": "Find the median and median class from frequency tables. Download free Edexcel Foundation and Higher past-paper questions.",
+    "youtubeUrl": "",
+    "featured": false,
+    "level": "Foundation & Higher",
+    "tier": "Both",
+    "grades": [],
+    "diagram": "median",
+    "explanation": "Use the total frequency to locate the middle observation or observations, then use cumulative totals to identify their values or class interval. The Higher booklet also includes estimating a median from grouped data and a histogram.",
+    "worksheet": {
+      "available": false,
+      "delivery": "web"
+    },
+    "pastPaperDescription": "Pearson Edexcel GCSE Maths (1MA1), selected from 2017–2025 papers. Median questions only; the Higher histogram extension is labelled at the end.",
+    "pastPaperPacks": [
+      {
+        "board": "Pearson Edexcel",
+        "title": "Foundation — median questions",
+        "tier": "Foundation",
+        "pdf": "/resources/Median_From_Frequency_Tables_Foundation.pdf",
+        "description": "8 questions/parts · 9 marks · 10 pages."
+      },
+      {
+        "board": "Pearson Edexcel",
+        "title": "Higher — median questions",
+        "tier": "Higher",
+        "pdf": "/resources/Median_From_Frequency_Tables_Higher.pdf",
+        "description": "6 questions/parts · 9 marks · 8 pages."
+      }
+    ]
   },
   {
     "title": "SOHCAHTOA",
