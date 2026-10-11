@@ -286,7 +286,17 @@
       7,
       8
     ],
-    "latexFormula": "x^2+6x+5=(x+3)^2-4"
+    "latexFormula": "x^2+6x+5=(x+3)^2-4",
+    "pastPaperDescription": "Selected Pearson Edexcel GCSE Maths (1MA1) questions from 2017–2025. Progress from completed-square form to turning points and graph applications.",
+    "pastPaperPacks": [
+      {
+        "board": "Pearson Edexcel",
+        "title": "Higher — past-paper questions",
+        "tier": "Higher",
+        "pdf": "/resources/Completing_The_Square_Past_Papers_Higher.pdf",
+        "description": "11 questions · 37 marks · 13 pages. Includes a short warm-up, completing the square, turning points and graph sketches."
+      }
+    ]
   },
   {
     "title": "Probability Trees",
