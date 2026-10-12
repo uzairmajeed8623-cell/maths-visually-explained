@@ -4,7 +4,7 @@ export default {
   siteUrl: 'https://uzairmajeed8623-cell.github.io/maths-visually-explained', // e.g. https://yourname.github.io/your-repo (no trailing slash)
   contactEmail: '',
   youtubeChannel: '',
-  calendlyUrl: '', // CALENDLY_URL: your https://calendly.com/... event URL
+  calendlyUrl: 'https://calendly.com/uzair-majeed8623/30min', // CALENDLY_URL: your https://calendly.com/... event URL
   tutor: { name: 'Uzair Majeed', photo: '', photoAlt: '', academicBackground: 'Ms Physics', research: '', experience: '', examBoards: '', testimonials: [] },
   mailerLite: {
     accountId: '2655165', // Loads MailerLite Universal once in every page head.
