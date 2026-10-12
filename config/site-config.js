@@ -12,7 +12,7 @@ export default {
     // hidden provider inputs, scripts, CAPTCHA, and consent controls intact.
     // MAILERLITE_FORM_CODE_HERE — this template is reused for every resource.
     formHtml: '',
-    diagnosticFormHtml: '',
+    diagnosticFormHtml: '<div class="ml-embedded" data-form="JiO1K4"></div>',
     // Optional form overrides; keys match worksheet.mailerLiteId in resources.json.
     resourceForms: {
       cosine_rule: '<div class="ml-embedded" data-form="g4crXY"></div>'
