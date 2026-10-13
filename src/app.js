@@ -1,5 +1,18 @@
 import {matchesCatalog} from './catalog.js';
 (() => {
+  // A regular link remains usable if Calendly is blocked or still loading.
+  for (const link of document.querySelectorAll('[data-calendly-popup]')) {
+    link.addEventListener('click', event => {
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      if (typeof window.Calendly?.initPopupWidget !== 'function') return;
+      try {
+        window.Calendly.initPopupWidget({url: link.href});
+        event.preventDefault();
+      } catch {
+        // Let the link open the booking page normally if the widget fails.
+      }
+    });
+  }
   const menu = document.querySelector('.menu-toggle');
   const nav = document.querySelector('#main-nav');
   const more = document.querySelector('.nav-more');

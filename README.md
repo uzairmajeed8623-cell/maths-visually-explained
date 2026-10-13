@@ -174,7 +174,7 @@ Official references: [custom fields](https://www.mailerlite.com/help/how-to-crea
 
 ## Change Calendly
 
-Set `calendlyUrl` in `config/site-config.js` to the HTTPS event URL from your account. Every booking CTA leads to `/book/`, which embeds that one configured URL and offers a direct fallback link. Set your event to 30 minutes and ensure its title, timezone, availability and parent/guardian questions match the site. Test a real booking, timezone display, confirmation and cancellation. The site does not create an event in your account.
+Set `calendlyUrl` in `config/site-config.js` to the HTTPS event URL from your account. Every booking CTA leads to `/book/`, which shows a compact consultation card and opens that configured URL in a Calendly popup. A direct link remains available if the widget is blocked or JavaScript is unavailable. Calendly widget assets load only on the booking page. Set your event to 30 minutes and ensure its title, timezone, availability and parent/guardian questions match the site. Test a real booking, timezone display, confirmation and cancellation. The site does not create an event in your account.
 
 ## Change contact details, tutor profile and videos
 
