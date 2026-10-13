@@ -286,3 +286,20 @@ The builder checks that the tier, year, session and paper number match.
 Questions without `paperId` remain in the searchable solution collection.
 This is a static website: editing and uploads are done in GitHub, not through a
 public student upload form. Commit to `main` to publish normally.
+
+## Browser-only diagnostic results
+
+`/diagnostic/check/` matches the original GCSE-DIAG-F-v1.0 and GCSE-DIAG-H-v1.0 papers: 18 questions and 24 one-mark answer checks per tier. The emailed student papers remain in the existing MailerLite flow. The website links to the answer checker beneath the form.
+
+Add a **Check my answers & download my report** button to each diagnostic delivery email:
+
+- Foundation: `https://uzairmajeed8623-cell.github.io/maths-visually-explained/diagnostic/check/?tier=F`
+- Higher: `https://uzairmajeed8623-cell.github.io/maths-visually-explained/diagnostic/check/?tier=H`
+
+Students see immediate results, worked explanations, a six-domain snapshot, up to three revision priorities and a PDF. Final values only are marked; equivalent fractions and terminating decimals are accepted, rounding must match the stated answer, and both values in a pair must be correct. Missing evidence and not-yet-taught topics are separate from revision gaps. Scores are not GCSE predictions and cannot be compared across tiers.
+
+All assessment processing runs locally in the browser. No answers, names or reports are uploaded or emailed. The optional save switch uses this site's localStorage on that device; turning it off removes saved progress, and the clear button resets both tiers. Without saving, refresh/closing the tab loses entries. No MailerLite, analytics, Calendly or other third-party scripts load on the checker route. MailerLite remains on the signup pages; booking opens the existing `/book/` page.
+
+The answer key is necessarily inspectable in client-side source: this is a low-stakes self-check, not a secure exam. MailerLite signup is a resource-delivery funnel, not access control for the checker. No API keys or student database are needed. PDF generation lazily loads the locally vendored jsPDF 4.2.1 and DejaVu Sans font, with their licences in `public/vendor/jspdf` and `public/fonts`.
+
+Implementation lives in `src/diagnostic/`. Question data and marking are separated from the UI and PDF renderer. The build hashes all diagnostic modules together to prevent stale mixed versions. `scripts/test-diagnostic.mjs`, included in `npm run check`, verifies marking and evidence rules against independent answer fixtures. When changing a paper, update its version, questions, explanations and tests together; old saved drafts are rejected when the assessment version differs.
