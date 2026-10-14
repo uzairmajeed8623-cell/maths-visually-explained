@@ -16,6 +16,9 @@ export function loadPaperArchive(questions) {
     const paper=papers.find(p=>p.id===override.id);
     if(!paper||seen.has(override.id))throw Error('Unknown or duplicate paper: '+override.id);
     seen.add(override.id);
+    paper.availabilityNote=override.availabilityNote||'';
+    paper.availabilitySource=override.availabilitySource||'';
+    if(paper.availabilitySource&&!/^https:\/\//.test(paper.availabilitySource))throw Error('Invalid availability source');
     for(const field of ['questionPaper','markScheme']){
       const value=override[field]||'';
       if(value&&!/^https:\/\//.test(value)&&!/^\/resources\/[A-Za-z0-9_./-]+\.pdf$/.test(value))throw Error('Invalid paper file URL: '+value);
@@ -39,7 +42,7 @@ export function renderPaperArchive({page,esc,a,url,eyebrow},questions){
   const archive=tier=>tier==='Higher'?'/past-papers/':'/past-papers/foundation/';
   const route=p=>`/past-papers/edexcel/${p.year}/${p.session.toLowerCase()}/${p.tier.toLowerCase()}/paper-${p.number}/`;
   const calculator=n=>n===1?'Non-calculator':'Calculator';
-  const count=p=>p.questions.length?`${p.questions.length} solution${p.questions.length===1?'':'s'}`:p.questionPaper?'Paper available':'Files not added';
+  const count=p=>p.questions.length?`${p.questions.length} solution${p.questions.length===1?'':'s'}`:p.questionPaper?'Paper available':p.availabilityNote?'Awaiting public release':'Files not added';
   for(const tier of tiers){
     page(archive(tier),`Edexcel ${tier} Maths Past Papers`,`Browse Edexcel GCSE ${tier} Maths papers by year, Summer or November, with question papers, mark schemes and worked solutions.`,`
       <section class="shell page-intro archive-intro">${eyebrow('PEARSON EDEXCEL · GCSE MATHS · 1MA1')}<h1>Past <em>papers.</em></h1><p>Choose your tier, year and paper.</p></section>
@@ -54,10 +57,11 @@ export function renderPaperArchive({page,esc,a,url,eyebrow},questions){
   }
   for(const p of papers){
     const label=`${p.session} ${p.year} · ${p.tier} · Paper ${p.number}`;
-    const file=(field,title)=>`<div class="exam-file"><div><h2>${title}</h2><p>${p[field]?'PDF document':'Not added yet'}</p></div>${p[field]?a(p[field],'Open PDF ↗','button secondary'):'<span class="file-pending">Coming soon</span>'}</div>`;
+    const file=(field,title)=>`<div class="exam-file"><div><h2>${title}</h2><p>${p[field]?(p[field].startsWith('https://qualifications.pearson.com/')?'Official Pearson PDF':'PDF document'):esc(p.availabilityNote||'Not added yet')}</p></div>${p[field]?a(p[field],'Open PDF ↗','button secondary'):`<span class="file-pending">${p.availabilityNote?'Awaiting release':'Coming soon'}</span>`}</div>`;
     page(route(p),`Edexcel ${label}`,`Edexcel GCSE Maths ${label}: question paper, mark scheme and available question solutions.`,`
       <section class="shell detail-intro exam-paper-intro"><div class="breadcrumbs">${a(archive(p.tier),'Past papers')} <span>/</span> ${p.year} <span>/</span> ${p.session}</div>${eyebrow('PEARSON EDEXCEL · GCSE MATHS · 1MA1')}<h1>${p.session} ${p.year}<br><em>Paper ${p.number} · ${p.tier}</em></h1><p>${calculator(p.number)}</p><nav class="paper-siblings" aria-label="Other papers in this session">${papers.filter(x=>x.year===p.year&&x.session===p.session&&x.tier===p.tier).map(x=>`<a href="${esc(url(route(x)))}"${x.number===p.number?' aria-current="page"':''}>Paper ${x.number}</a>`).join('')}</nav></section>
       <section class="shell exam-files" aria-label="Paper and mark scheme">${file('questionPaper','Question paper')}${file('markScheme','Mark scheme')}</section>
+      ${p.availabilitySource?`<p class="shell small">${a(p.availabilitySource,'Pearson paper availability ↗')}</p>`:''}
       <section class="shell exam-solutions" aria-labelledby="solutions-heading"><div class="section-heading"><h2 id="solutions-heading">Question solutions</h2><span class="small">${p.questions.length} available</span></div>${p.questions.length?`<ul class="exam-question-list">${p.questions.map(q=>`<li><span class="question-number">Q${esc(q.questionNumber)}</span><div><h3>${a('/past-papers/'+q.slug+'/',esc(q.title))}</h3><p>${esc(q.topic)}</p></div><div class="question-actions">${q.videoId?a('/past-papers/'+q.slug+'/#video','Watch video ↗','button secondary'):''}${q.contentFile?a('/past-papers/'+q.slug+'/#worked-solution','Worked solution ↗','button secondary'):''}</div></li>`).join('')}</ul>`:'<div class="paper-empty"><p>Video explanations and worked solutions will appear here as they are added.</p></div>'}</section>`, '/past-papers/');
   }
   return new Map(papers.flatMap(p=>p.questions.map(q=>[q.slug,{url:route(p),label:`${p.session} ${p.year} · Paper ${p.number}`}])));

@@ -53,7 +53,9 @@ try {
     assert(paper.includes('test-written/#worked-solution'));
     assert(paper.includes('test-video/#video'));
     assert(paper.includes('test-both/#worked-solution')&&paper.includes('test-both/#video'));
-    assert.equal((paper.match(/Not added yet/g)||[]).length,2);
+    assert.equal((paper.match(/Official Pearson PDF/g)||[]).length,2);
+    assert.equal((read('past-papers/edexcel/2024/summer/foundation/paper-1/index.html').match(/Not added yet/g)||[]).length,2);
+    assert(read('past-papers/edexcel/2025/november/higher/paper-1/index.html').includes('Awaiting release'));
     assert(!paper.includes('href=""'));
     assert(!read('past-papers/edexcel/2024/summer/foundation/paper-1/index.html').includes('test-written'));
     assert(written.includes(`href="${base}/past-papers/edexcel/2024/summer/higher/paper-1/"`));
@@ -86,6 +88,7 @@ try {
     }
   }
   const archiveConfig=JSON.parse(fs.readFileSync(path.join(temp,'data/exam-papers.json'),'utf8'));
+  archiveConfig.papers=archiveConfig.papers.filter(p=>p.id!=='edexcel-2024-summer-1h');
   archiveConfig.papers.push({id:'edexcel-2024-summer-1h',questionPaper:'/resources/pythagoras-practice.pdf',markScheme:'https://example.com/test-mark-scheme.pdf'});
   fs.writeFileSync(path.join(temp,'data/exam-papers.json'),JSON.stringify(archiveConfig));
   execFileSync(process.execPath,['scripts/build.mjs'],{cwd:temp,env:{...process.env,BASE_PATH:''},stdio:'pipe'});
