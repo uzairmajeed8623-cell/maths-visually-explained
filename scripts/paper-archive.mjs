@@ -42,7 +42,7 @@ export function renderPaperArchive({page,esc,a,url,eyebrow},questions){
   const archive=tier=>tier==='Higher'?'/past-papers/':'/past-papers/foundation/';
   const route=p=>`/past-papers/edexcel/${p.year}/${p.session.toLowerCase()}/${p.tier.toLowerCase()}/paper-${p.number}/`;
   const calculator=n=>n===1?'Non-calculator':'Calculator';
-  const count=p=>p.questions.length?`${p.questions.length} solution${p.questions.length===1?'':'s'}`:p.questionPaper?'Paper available':p.availabilityNote?'Awaiting public release':'Files not added';
+  const count=p=>p.questionPaper?'':p.availabilityNote?'Awaiting public release':'Files not added';
   for(const tier of tiers){
     page(archive(tier),`Edexcel ${tier} Maths Past Papers`,`Browse Edexcel GCSE ${tier} Maths papers by year, Summer or November, with question papers, mark schemes and worked solutions.`,`
       <section class="shell page-intro archive-intro">${eyebrow('PEARSON EDEXCEL · GCSE MATHS · 1MA1')}<h1>Past <em>papers.</em></h1><p>Choose your tier, year and paper.</p></section>
@@ -51,7 +51,7 @@ export function renderPaperArchive({page,esc,a,url,eyebrow},questions){
         <p class="archive-hint">Paper 1: non-calculator · Papers 2 &amp; 3: calculator</p>
         ${[...config.years].sort((a,b)=>b-a).map(year=>`<section class="exam-year" aria-labelledby="year-${year}"><h2 id="year-${year}">${year}</h2><div class="exam-sessions">${sessions.map(session=>{
           const unavailable=cancelled(year,session);
-          return `<section class="exam-session" aria-labelledby="${session.toLowerCase()}-${year}"><h3 id="${session.toLowerCase()}-${year}">${session}</h3>${unavailable?`<p class="session-unavailable">${esc(unavailable.reason)}</p>`:`<div class="paper-options">${papers.filter(p=>p.year===year&&p.session===session&&p.tier===tier).map(p=>`<a class="paper-option" href="${esc(url(route(p)))}" aria-label="${year} ${session} ${tier} Paper ${p.number}"><strong>Paper ${p.number}<span aria-hidden="true">↗</span></strong><span${p.questions.length?' class="has-solutions"':''}>${count(p)}</span></a>`).join('')}</div>`}</section>`;
+          return `<section class="exam-session" aria-labelledby="${session.toLowerCase()}-${year}"><h3 id="${session.toLowerCase()}-${year}">${session}</h3>${unavailable?`<p class="session-unavailable">${esc(unavailable.reason)}</p>`:`<div class="paper-options">${papers.filter(p=>p.year===year&&p.session===session&&p.tier===tier).map(p=>`<a class="paper-option" href="${esc(url(route(p)))}" aria-label="${year} ${session} ${tier} Paper ${p.number}"><strong>Paper ${p.number}<span aria-hidden="true">↗</span></strong>${count(p)?`<span>${count(p)}</span>`:''}</a>`).join('')}</div>`}</section>`;
         }).join('')}</div></section>`).join('')}
       </section>`, '/past-papers/');
   }
