@@ -54,8 +54,10 @@ try {
     assert(paper.includes('test-video/#video'));
     assert(paper.includes('test-both/#worked-solution')&&paper.includes('test-both/#video'));
     assert.equal((paper.match(/Official Pearson PDF/g)||[]).length,2);
-    assert.equal((read('past-papers/edexcel/2024/summer/foundation/paper-1/index.html').match(/Not added yet/g)||[]).length,2);
+    assert.equal((read('past-papers/edexcel/2024/summer/foundation/paper-1/index.html').match(/Official Pearson PDF/g)||[]).length,2);
     assert(read('past-papers/edexcel/2025/november/higher/paper-1/index.html').includes('Awaiting release'));
+    assert(read('past-papers/edexcel/2025/november/foundation/paper-1/index.html').includes('Awaiting release'));
+    assert(!foundation.includes('Paper available')&&!foundation.includes('Files not added'));
     assert(!paper.includes('href=""'));
     assert(!read('past-papers/edexcel/2024/summer/foundation/paper-1/index.html').includes('test-written'));
     assert(written.includes(`href="${base}/past-papers/edexcel/2024/summer/higher/paper-1/"`));

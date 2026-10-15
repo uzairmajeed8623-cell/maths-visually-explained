@@ -282,6 +282,264 @@
       "id": "edexcel-2019-summer-3h",
       "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1MA1_3H_que_20190612.pdf",
       "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1MA1_3H_rms_20190822.pdf"
+    },
+    {
+      "id": "edexcel-2025-summer-1f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-1f-que-20250516.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-1f-rms-20250821.pdf"
+    },
+    {
+      "id": "edexcel-2025-summer-2f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-2f-que-20250605.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-2f-rms-20250821.pdf"
+    },
+    {
+      "id": "edexcel-2025-summer-3f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-3f-que-20250612.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-3f-rms-20250821.pdf"
+    },
+    {
+      "id": "edexcel-2024-november-1f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-1f-que-20241107.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-1f-rms-20250109.pdf"
+    },
+    {
+      "id": "edexcel-2024-november-2f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-2f-que-20241109.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-2f-rms-20250109.pdf"
+    },
+    {
+      "id": "edexcel-2024-november-3f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-3f-que-20241112.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-3f-rms-20250109.pdf"
+    },
+    {
+      "id": "edexcel-2024-summer-1f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-1f-que-20240517.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-1f-rms-20240822.pdf"
+    },
+    {
+      "id": "edexcel-2024-summer-2f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-2f-que-20240604.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-2f-rms-20240822.pdf"
+    },
+    {
+      "id": "edexcel-2024-summer-3f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-3f-que-20240611.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-3f-rms-20240822.pdf"
+    },
+    {
+      "id": "edexcel-2023-november-1f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-1f-que-20231109.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-1f-rms-20240111.pdf"
+    },
+    {
+      "id": "edexcel-2023-november-2f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-2f-que-20231111.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-2f-rms-20240111.pdf"
+    },
+    {
+      "id": "edexcel-2023-november-3f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-3f-que-20231114.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-3f-rms-20240111.pdf"
+    },
+    {
+      "id": "edexcel-2023-summer-1f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-1f-que-20230520.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-1f-rms-20230824.pdf"
+    },
+    {
+      "id": "edexcel-2023-summer-2f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-2f-que-20230608.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-2f-rms-20230824.pdf"
+    },
+    {
+      "id": "edexcel-2023-summer-3f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-3f-que-20230615.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/Mathematics/2015/Exam-materials/1ma1-3f-rms-20230824.pdf"
+    },
+    {
+      "id": "edexcel-2022-november-1f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1ma1-1f-que-20221102.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1ma1-1f-rms-20230112.pdf"
+    },
+    {
+      "id": "edexcel-2022-november-2f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1ma1-2f-que-20221104.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1ma1-2f-rms-20230112.pdf"
+    },
+    {
+      "id": "edexcel-2022-november-3f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1ma1-3f-que-20221108.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1ma1-3f-rms-20230112.pdf"
+    },
+    {
+      "id": "edexcel-2022-summer-1f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1ma1-1f-que-20220521.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1ma1-1f-rms-20220825.pdf"
+    },
+    {
+      "id": "edexcel-2022-summer-2f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1ma1-2f-que-20220608.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1ma1-2f-rms-20220825.pdf"
+    },
+    {
+      "id": "edexcel-2022-summer-3f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1ma1-3f-que-20220614.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1ma1-3f-rms-20220825.pdf"
+    },
+    {
+      "id": "edexcel-2021-november-1f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1ma1-1f-que-20211103.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1ma1-1f-rms-20220113.pdf"
+    },
+    {
+      "id": "edexcel-2021-november-2f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1ma1-2f-que-20211105.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1ma1-2f-rms-20220113.pdf"
+    },
+    {
+      "id": "edexcel-2021-november-3f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1ma1-3f-que-20211109.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1ma1-3f-rms-20220113.pdf"
+    },
+    {
+      "id": "edexcel-2020-november-1f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1ma1-1f-que-20201104.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1MA1_1F_msc_20210114.pdf"
+    },
+    {
+      "id": "edexcel-2020-november-2f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1MA1_2F_que_20201106.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1MA1_2F_msc_20210114.pdf"
+    },
+    {
+      "id": "edexcel-2020-november-3f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1ma1-3f-que-20201110.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1MA1_3F_msc_20210114.pdf"
+    },
+    {
+      "id": "edexcel-2019-november-1f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1MA1_1F_que_20200116.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1MA1_1F_msc_20200116.pdf"
+    },
+    {
+      "id": "edexcel-2019-november-2f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1MA1_2F_que_20200116.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1MA1_2F_msc_20200116.pdf"
+    },
+    {
+      "id": "edexcel-2019-november-3f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1MA1_3F_que_20200116.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1MA1_3F_msc_20200116.pdf"
+    },
+    {
+      "id": "edexcel-2019-summer-1f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1MA1_1F_que_20190522.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1MA1_1F_rms_20190822.pdf"
+    },
+    {
+      "id": "edexcel-2019-summer-2f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1MA1_2F_que_20190607.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1ma1-2f-rms-20190822.pdf"
+    },
+    {
+      "id": "edexcel-2019-summer-3f",
+      "questionPaper": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1MA1_3F_que_20190612.pdf",
+      "markScheme": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1MA1_3F_rms_20190822.pdf"
+    },
+    {
+      "id": "edexcel-2017-november-1f",
+      "markScheme": "/resources/past-papers/edexcel/2017-november-1f-markScheme.pdf",
+      "sourceArchive": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1MA1_November_2017_QP_MS.zip",
+      "questionPaper": "/resources/past-papers/edexcel/2017-november-1f-questionPaper.pdf"
+    },
+    {
+      "id": "edexcel-2017-november-2f",
+      "markScheme": "/resources/past-papers/edexcel/2017-november-2f-markScheme.pdf",
+      "sourceArchive": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1MA1_November_2017_QP_MS.zip",
+      "questionPaper": "/resources/past-papers/edexcel/2017-november-2f-questionPaper.pdf"
+    },
+    {
+      "id": "edexcel-2017-november-3f",
+      "markScheme": "/resources/past-papers/edexcel/2017-november-3f-markScheme.pdf",
+      "sourceArchive": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1MA1_November_2017_QP_MS.zip",
+      "questionPaper": "/resources/past-papers/edexcel/2017-november-3f-questionPaper.pdf"
+    },
+    {
+      "id": "edexcel-2017-summer-2f",
+      "markScheme": "/resources/past-papers/edexcel/2017-summer-2f-markScheme.pdf",
+      "sourceArchive": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1MA1_Summer_2017_QP_MS.zip",
+      "questionPaper": "/resources/past-papers/edexcel/2017-summer-2f-questionPaper.pdf"
+    },
+    {
+      "id": "edexcel-2017-summer-3f",
+      "markScheme": "/resources/past-papers/edexcel/2017-summer-3f-markScheme.pdf",
+      "sourceArchive": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1MA1_Summer_2017_QP_MS.zip",
+      "questionPaper": "/resources/past-papers/edexcel/2017-summer-3f-questionPaper.pdf"
+    },
+    {
+      "id": "edexcel-2017-summer-1f",
+      "markScheme": "/resources/past-papers/edexcel/2017-summer-1f-markScheme.pdf",
+      "sourceArchive": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/1MA1_Summer_2017_QP_MS.zip",
+      "questionPaper": "/resources/past-papers/edexcel/2017-summer-1f-questionPaper.pdf"
+    },
+    {
+      "id": "edexcel-2018-november-1f",
+      "questionPaper": "/resources/past-papers/edexcel/2018-november-1f-questionPaper.pdf",
+      "sourceArchive": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/question-papers-and-mark-schemes-1MA1-november-2018.zip",
+      "markScheme": "/resources/past-papers/edexcel/2018-november-1f-markScheme.pdf"
+    },
+    {
+      "id": "edexcel-2018-november-3f",
+      "questionPaper": "/resources/past-papers/edexcel/2018-november-3f-questionPaper.pdf",
+      "sourceArchive": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/question-papers-and-mark-schemes-1MA1-november-2018.zip",
+      "markScheme": "/resources/past-papers/edexcel/2018-november-3f-markScheme.pdf"
+    },
+    {
+      "id": "edexcel-2018-november-2f",
+      "questionPaper": "/resources/past-papers/edexcel/2018-november-2f-questionPaper.pdf",
+      "sourceArchive": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/question-papers-and-mark-schemes-1MA1-november-2018.zip",
+      "markScheme": "/resources/past-papers/edexcel/2018-november-2f-markScheme.pdf"
+    },
+    {
+      "id": "edexcel-2018-summer-1f",
+      "markScheme": "/resources/past-papers/edexcel/2018-summer-1f-markScheme.pdf",
+      "sourceArchive": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/question-papers-mark-schemes-1MA1-june-2018.zip",
+      "questionPaper": "/resources/past-papers/edexcel/2018-summer-1f-questionPaper.pdf"
+    },
+    {
+      "id": "edexcel-2018-summer-2f",
+      "markScheme": "/resources/past-papers/edexcel/2018-summer-2f-markScheme.pdf",
+      "sourceArchive": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/question-papers-mark-schemes-1MA1-june-2018.zip",
+      "questionPaper": "/resources/past-papers/edexcel/2018-summer-2f-questionPaper.pdf"
+    },
+    {
+      "id": "edexcel-2018-summer-3f",
+      "markScheme": "/resources/past-papers/edexcel/2018-summer-3f-markScheme.pdf",
+      "sourceArchive": "https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/exam-materials/question-papers-mark-schemes-1MA1-june-2018.zip",
+      "questionPaper": "/resources/past-papers/edexcel/2018-summer-3f-questionPaper.pdf"
+    },
+    {
+      "id": "edexcel-2025-november-1f",
+      "questionPaper": "",
+      "markScheme": "",
+      "availabilityNote": "Not publicly available from Pearson yet. Recent papers are restricted to registered centres for 12 months.",
+      "availabilitySource": "https://qualifications.pearson.com/en/support/support-topics/exams/past-papers.html"
+    },
+    {
+      "id": "edexcel-2025-november-2f",
+      "questionPaper": "",
+      "markScheme": "",
+      "availabilityNote": "Not publicly available from Pearson yet. Recent papers are restricted to registered centres for 12 months.",
+      "availabilitySource": "https://qualifications.pearson.com/en/support/support-topics/exams/past-papers.html"
+    },
+    {
+      "id": "edexcel-2025-november-3f",
+      "questionPaper": "",
+      "markScheme": "",
+      "availabilityNote": "Not publicly available from Pearson yet. Recent papers are restricted to registered centres for 12 months.",
+      "availabilitySource": "https://qualifications.pearson.com/en/support/support-topics/exams/past-papers.html"
     }
   ]
 }
